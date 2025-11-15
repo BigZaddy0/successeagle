@@ -634,3 +634,52 @@
     background: var(--bs-secondary) !important;
 }
 /*** copyright end ***/
+
+/* Responsive tweaks: improve layout and typography on smaller screens */
+
+@media (max-width: 1199.98px) {
+    .bg-breadcrumb { padding: 80px 0 40px 0; }
+}
+
+@media (max-width: 991.98px) {
+    .bg-breadcrumb { padding: 60px 0 30px 0; }
+    .display-1 { font-size: 2.5rem; }
+    .display-5 { font-size: 1.8rem; }
+    .navbar-light .navbar-brand img { max-height: 42px; }
+}
+
+@media (max-width: 767.98px) {
+    /* Make carousel images less tall on small devices */
+    .carousel-header .carousel-inner .carousel-item { min-height: 60vh; }
+    .carousel-header .carousel-inner .carousel-item img { position: relative; height: 60vh; }
+
+    /* Reduce hero paddings and font sizes */
+    .bg-breadcrumb { padding: 40px 0 20px 0; }
+    .display-1 { font-size: 2rem; }
+    .display-5 { font-size: 1.5rem; }
+
+    /* Navigation tweaks */
+    .navbar-light .navbar-nav .nav-link { margin-right: 0; padding: 8px 0; font-size: 15px; }
+    .navbar .navbar-toggler { padding: 8px 12px; }
+
+    /* Service cards: avoid hover-only interactions on touch devices */
+    .service .service-item .service-inner .service-title .service-content { position: relative; bottom: 0; opacity: 1; background: var(--bs-primary); }
+    .service .service-item .service-inner .service-title .service-title-name { opacity: 1; }
+
+    /* Smaller testimonial images */
+    .testimonial .owl-carousel.testimonial-carousel .testimonial-item .rounded-circle { width: 70px !important; height: 70px !important; }
+
+    /* Reduce footer paddings */
+    .footer .footer-item { margin-bottom: 20px; }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-light .navbar-brand img { max-height: 36px; }
+    .display-1 { font-size: 1.6rem; }
+    .display-5 { font-size: 1.2rem; }
+    .carousel-header .carousel-inner .carousel-item img { height: 50vh; }
+    .section-title { padding-left: 15px; padding-right: 15px; }
+}
+
+/* Utility: ensure all images are responsive (reinforce for any non-Bootstrap uses) */
+.img-fluid, img { max-width: 100%; height: auto; }
