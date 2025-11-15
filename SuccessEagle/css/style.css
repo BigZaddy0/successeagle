@@ -233,6 +233,20 @@
     vertical-align: middle;
 }
 
+@media (max-width: 375px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
 @media (min-width: 1200px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -414,7 +428,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .carousel-header {
         height: 700px !important;
     }
@@ -634,3 +648,114 @@
     background: var(--bs-secondary) !important;
 }
 /*** copyright end ***/
+
+/* Navbar, Footer and Carousel caption - targeted responsive tweaks */
+
+/* Default tweaks for larger tablets and below */
+@media (max-width: 991.98px) {
+    /* Navbar brand and links */
+    .navbar-brand h1 {
+        font-size: 1.05rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        white-space: nowrap;
+    }
+    .navbar-brand h1 img { max-height: 42px; }
+    .navbar-light .navbar-nav .nav-link { font-size: 15px; padding: 10px 0; }
+
+    /* Carousel caption text sizing */
+    .carousel-header .carousel-inner .carousel-item .carousel-caption h1 {
+        font-size: calc(28px + 1vw);
+        line-height: 1.08;
+        padding: 0 12px;
+    }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption h4 {
+        font-size: calc(18px + .4vw);
+    }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p {
+        font-size: 15px;
+        padding: 0 16px;
+    }
+
+    /* Footer adjustments */
+    .footer .footer-item a,
+    .footer .footer-item p { font-size: 15px; }
+}
+
+/* Mobile phones and small devices */
+@media (max-width: 767.98px) {
+    .navbar-brand h1 {
+        font-size: 0.95rem;
+        white-space: normal; /* allow wrapping if necessary */
+    }
+    .navbar-brand h1 img { max-height: 36px; }
+    .navbar-light .navbar-nav .nav-link { font-size: 14px; padding: 8px 0; }
+
+    .carousel-header .carousel-inner .carousel-item { min-height: 60vh; }
+    .carousel-header .carousel-inner .carousel-item img { height: 60vh; }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption h1 {
+        font-size: calc(20px + 2.4vw);
+        padding: 0 14px;
+    }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption h4 {
+        font-size: 16px;
+    }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p {
+        font-size: 13px;
+        padding: 0 18px;
+    }
+
+    /* Footer layout for narrow screens */
+    .footer .footer-item { text-align: center; }
+    .footer .footer-item a { display: block; }
+    .footer { padding-top: 30px; padding-bottom: 30px; }
+}
+
+/* Extra-small devices */
+@media (max-width: 575.98px) {
+    .navbar-brand h1 { font-size: 0.88rem; }
+    .navbar-brand h1 img { max-height: 32px; }
+
+    .carousel-header .carousel-inner .carousel-item img { height: 50vh; }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption h1 { font-size: 1.4rem; }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption h4 { font-size: 1rem; }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p { font-size: .95rem; }
+
+    .footer .footer-item a { line-height: 1.6; }
+}
+
+/* small utility: shrink very long navbar brand text on tiny screens */
+@media (max-width: 420px) {
+    .navbar-brand h1 { font-size: 0.82rem; }
+}
+
+/* Further reduce carousel paragraph size on very small screens */
+@media (max-width: 420px) {
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p.fs-5,
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p {
+        font-size: 0.85rem !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        line-height: 1.2 !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p.fs-5,
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p {
+        font-size: 0.8rem !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p.fs-5,
+    .carousel-header .carousel-inner .carousel-item .carousel-caption p {
+        font-size: 0.75rem !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+}
