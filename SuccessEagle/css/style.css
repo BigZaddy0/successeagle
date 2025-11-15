@@ -687,7 +687,7 @@
 /* Mobile phones and small devices */
 @media (max-width: 767.98px) {
     .navbar-brand h1 {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         white-space: normal; /* allow wrapping if necessary */
     }
     .navbar-brand h1 img { max-height: 36px; }
@@ -715,7 +715,7 @@
 
 /* Extra-small devices */
 @media (max-width: 575.98px) {
-    .navbar-brand h1 { font-size: 0.88rem; }
+    .navbar-brand h1 { font-size: 1.2rem; }
     .navbar-brand h1 img { max-height: 32px; }
 
     .carousel-header .carousel-inner .carousel-item img { height: 50vh; }
@@ -728,7 +728,7 @@
 
 /* small utility: shrink very long navbar brand text on tiny screens */
 @media (max-width: 420px) {
-    .navbar-brand h1 { font-size: 0.82rem; }
+    .navbar-brand h1 { font-size: 1.2rem; }
 }
 
 /* Further reduce carousel paragraph size on very small screens */
